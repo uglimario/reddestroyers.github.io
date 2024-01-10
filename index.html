@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Red Destroyers</title>
+    <link rel="stylesheet" href="/Red Destroyers/style/stylesheet.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="/Red Destroyers/images/Red Destroyers logo dark2.png" class="logo">
+            <button type="button" class="button">Sign Up</button>
+        </div>
+        <div class="content">
+            <small>You're welcome</small>
+            <h1>World's<br>Red Destroyers</h1>
+            <button type="button" class="button">Join Team</button>
+        </div>
+        <div class="side-bar">
+            <img src="" class="menu">
+            
+            <div class="social-links">
+                <img src="images/google-icon.png">
+                <img src="images/discord-icon.png" id="openInviteLink">
+                <img src="images/youtube-icon.png">
+                <img src="images/tiktok-icon.png">
+                <img src="images/twitter-old-icon.png">
+                <img src="images/instagram-icon.png">
+            </div>
+            <div class="useful-links">
+                <img src="images/settings-icon.png">
+                <img src="images/profile-icon.png">
+                <img src="images/web-icon.png" id="openBrowserImage">
+                <img src="images/search-icon.png">
+            </div>
+            <div class="sugo">
+                <img src="images/support-icon.png" id="openSupportPage">
+                <img src="images/copy-icon.png" id="copyImage">
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('copyImage').addEventListener('click', function() {
+                // Az aktuális oldal URL-jének lekérése
+                var currentURL = window.location.href;
+    
+                // Egy új, láthatatlan textarea létrehozása a szöveg beillesztéséhez
+                var textArea = document.createElement('textarea');
+                textArea.value = currentURL;
+                document.body.appendChild(textArea);
+    
+                // Szöveg kijelölése és vágólapra másolása
+                textArea.select();
+                document.execCommand('copy');
+    
+                // Felesleges textarea eltávolítása
+                document.body.removeChild(textArea);
+    
+                // Visszajelzés a felhasználónak (ezt testreszabhatod)
+                alert('Link copied to clipboard!');
+    
+                // Kép cseréje tűz ikonra másodpercre
+                document.getElementById('copyImage').src = 'images/copy-icon active.png';
+    
+                // Időzítő beállítása a kép visszaállításához
+                setTimeout(function() {
+                    document.getElementById('copyImage').src = 'images/copy-icon.png';
+                }, 400); // 400 millimásodperc = 0.4 másodperc
+                });
+                    // Gomb eseménykezelő
+                function openDefaultBrowser() {
+                    // Az alapértelmezett böngésző megnyitása az aktuális oldal URL-jével
+                    var currentURL = window.location.href;
+                    window.open(currentURL, '_blank');
+                }
+
+                // Eseménykezelő hozzáadása a dokumentumhoz
+                document.addEventListener('click', function(event) {
+                    // Ellenőrzés, hogy a kattintás a képre történt-e
+                    if (event.target.id === 'openBrowserImage') {
+                        openDefaultBrowser();
+                    }
+                });
+                    // Eseménykezelő
+                function openDiscordInviteLink() {
+                    // A Discord meghívó link megnyitása az aktuális oldal URL-jével
+                    var discordInviteLink = "https://discord.gg/HEYNUkzFVC";
+                    window.open(discordInviteLink, '_blank');
+                }
+
+                // Eseménykezelő hozzáadása a dokumentumhoz
+                document.addEventListener('click', function(event) {
+                    // Ellenőrzés, hogy a kattintás a képre történt-e
+                    if (event.target.id === 'openInviteLink') {
+                        openDiscordInviteLink();
+                    }
+                });
+                    // Eseménykezelő
+                    function openGoogleSupportPage() {
+                    // A Discord meghívó link megnyitása az aktuális oldal URL-jével
+                    var GoogleSupportLink = "https://support.google.com/chrome";
+                    window.open(GoogleSupportLink, '_blank');
+                }
+
+                // Eseménykezelő hozzáadása a dokumentumhoz
+                document.addEventListener('click', function(event) {
+                    // Ellenőrzés, hogy a kattintás a képre történt-e
+                    if (event.target.id === 'openSupportPage') {
+                        openGoogleSupportPage();
+                    }
+                });
+        </script>
+
+<!--// Gomb eseménykezelő           ha linket akarunk megnyittatni vele akk ez a kod kell
+function openLink() {
+    // Az adott link megnyitása az aktuális oldal URL-jével
+    var linkToOpen = "https://www.example.com";
+    window.open(linkToOpen, '_blank');
+}
+
+// Eseménykezelő hozzáadása a dokumentumhoz
+document.addEventListener('click', function(event) {
+    // Ellenőrzés, hogy a kattintás a képre történt-e
+    if (event.target.id === 'openLinkImage') {
+        openLink();
+    }
+});-->
+
+
+
+
+
+
+
+
+    <!--<div class="bubbles1">
+            <img src="Images/bubble.png">
+            <img src="Images/bubble.png">
+            <img src="Images/bubble.png">
+        </div>
+        <div class="bubbles2">
+            <img src="Images/bubble.png">
+            <img src="Images/bubble.png">
+        </div>
+        <div class="bubbles3">
+            <img src="Images/bubble.png">
+            <img src="Images/bubble.png">
+        </div>         -->
+    </div>
+</body>
+</html>
