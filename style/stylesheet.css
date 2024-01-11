@@ -113,12 +113,66 @@ h1 {
     width: 40px;
     bottom: 20%;
     transform: translateX(0%);
+
+    transition: transform 0.25s ;
+}
+
+.social-links > .img1,
+.social-links > .img2,
+.social-links > .img3,
+.social-links > .img4,
+.social-links > .img5,
+.social-links > .img6,
+.social-links > .img7 {
+    transition: transform 0.25s ;
+}
+  
+.social-links > .img1:hover {
+    transform: translateY(-7px); 
+}
+.social-links > .img2:hover {
+    transform: translateY(-7px);
+}
+.social-links > .img3:hover {
+    transform: translateY(-7px);
+}
+.social-links > .img4:hover {
+    transform: translateY(-7px);
+}
+.social-links > .img5:hover {
+    transform: translateY(-7px);
+}
+.social-links > .img6:hover {
+    transform: translateY(-7px);
+}
+.social-links > .img7:hover {
+    transform: translateY(-7px);
 }
 
 .useful-links {
     width: 50px;
     bottom: 20%;
     left: 4%;
+}
+
+.useful-links > .img1,
+.useful-links > .img2,
+.useful-links > .img3,
+.useful-links > .img4 {
+    transition: transform 0.2s;
+}
+
+.useful-links > .img1:hover {
+    transform: scale(0.9);
+}
+.useful-links > .img2:hover {
+    transform: scale(0.9);
+}
+.useful-links > .img3:hover {
+    transform: scale(0.9);
+}
+.useful-links > .img4:hover {
+    transform: scale(0.9);
 }
 
 .sugo {
